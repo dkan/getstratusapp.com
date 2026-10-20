@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Open in Stratus</title>
+<meta name="description" content="Someone shared a memory from Stratus, a private memory for your iPhone.">
+<link rel="canonical" href="https://getstratusapp.com/open.html">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1622" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="A memory from Stratus">
+<meta property="og:description" content="Someone shared a memory from Stratus, a private memory for your iPhone.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://getstratusapp.com/open.html">
+<meta property="og:site_name" content="Stratus">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="robots" content="noindex">
+<!-- Smart App Banner: uncomment once the App Store ID exists.
+<meta name="apple-itunes-app" content="app-id=0000000000"> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&family=Manrope:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="wrap top">
+  <a class="brand" href="index.html" aria-label="Stratus home"><span class="glyph" aria-hidden="true"></span>Stratus</a>
+</header>
+<main class="wrap narrow">
+  <div class="open-card">
+    <p class="eyebrow">A shared memory</p>
+    <h1>Someone shared a memory with you.</h1>
+    <p class="lede">This memory lives in the sender's Stratus, on their iPhone and in their iCloud. If it is in a shared space you were invited to, it opens in your Stratus too. Otherwise, ask them to add it to a shared space and invite you.</p>
+    <div class="cta">
+      <a class="open-btn" id="open-app" href="index.html" hidden>Open in Stratus</a>
+      <a class="store" href="index.html#download" id="store-open">
+        <img class="badge-light" src="img/app-store-badge-black.svg" width="120" height="40" alt="Download on the App Store">
+        <img class="badge-dark" src="img/app-store-badge-white.svg" width="120" height="40" alt="Download on the App Store">
+      </a>
+    </div>
+    <p class="fine" id="bad-link" hidden>This link looks incomplete. Ask the sender to share it again.</p>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 Stratus</span>
+    <nav aria-label="Legal">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="mailto:hello@getstratusapp.com">hello@getstratusapp.com</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var id = new URLSearchParams(window.location.search).get("m") || "";
+    var uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+    if (!uuid.test(id)) { document.getElementById("bad-link").hidden = false; return; }
+    var appURL = "stratus://memory/" + id.toLowerCase();
+    var button = document.getElementById("open-app");
+    button.href = appURL;
+    button.hidden = false;
+    // Try the app straight away; if it is not installed the page simply stays.
+    window.location.href = appURL;
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["M23ZEPCJNB.com.damienkan.stratus"],
+        "components": [
+          { "/": "/open*", "comment": "Shared memory links: /open?m=<memory id>" }
+        ]
+      }
+    ]
+  }
+}
