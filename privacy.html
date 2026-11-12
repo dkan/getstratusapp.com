@@ -27,98 +27,117 @@
 </header>
 <main class="wrap narrow legal">
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated November 12, 2026</p>
+  <p class="updated">Effective November 12, 2026</p>
 
   <div class="summary">
-    <p><b>The short version:</b> your memories stay on your devices and in your own iCloud. We do not run a server that stores them, we do not sell data, and we do not show ads. The app has no analytics, no accounts and no ad trackers, so we collect no data about you.</p>
+    <p><b>The short version</b></p>
+    <ul>
+      <li>Your memories live on your iPhone and in your own iCloud, not on our servers. We don't run servers, and we can't see them.</li>
+      <li>Speech is turned into text on your device. Sorting memories and answering questions use Apple's on-device model. Nothing is sent to an AI provider.</li>
+      <li>We don't sell data, show ads, use analytics, or track you across apps and websites.</li>
+      <li>Google Calendar and Todoist (both optional) connect your device directly to those services. Their data never reaches us and is used only to create and update the items you ask for.</li>
+    </ul>
   </div>
 
   <h2>Who we are</h2>
-  <p>Stratus ("we", "us") makes the Stratus app for iPhone. This policy explains what information the app handles and where it goes. If you have questions, email <a href="mailto:hello@getstratusapp.com">hello@getstratusapp.com</a>.</p>
+  <p>Stratus is made by Damien Kan ("we", "us"). This policy explains what happens to information when you use the Stratus app for iPhone and the website at getstratusapp.com. Questions go to hello@getstratusapp.com.</p>
 
-  <h2>What you put in Stratus</h2>
-  <p>Stratus stores what you choose to save: spoken or typed memories, photos, shared links and notes, and the people, places and plans it recognizes in them. This content is stored:</p>
-  <ul>
-    <li>On your device, in the app's private storage.</li>
-    <li>In your private iCloud account, if iCloud is on, so it syncs between your devices. Apple handles this under its own privacy policy. We cannot access it.</li>
-  </ul>
+  <h2>Where your memories are stored</h2>
+  <p>Everything you add to Stratus (spoken and typed memories, the people, places, plans, tasks and facts it finds in them, photos, saved links, and the corrections it learns from) is stored on your device and, if iCloud is on, in Apple's iCloud using CloudKit under your Apple Account so it syncs between your devices. If you share a space with someone, iCloud shares the memories in that space with the people you invite. Apple's privacy policy covers how iCloud stores this data.</p>
+  <p>Short voice recordings of your memories are kept on your device only, are never uploaded, and are removed automatically as newer ones are saved. We don't operate servers that store your memories, and we can't read them.</p>
 
   <h2>How Stratus processes it</h2>
   <ul>
-    <li><b>Voice:</b> speech is transcribed on your device. Audio is not sent to us.</li>
-    <li><b>Understanding and answers:</b> sorting memories and answering questions use Apple's on-device model. Your memories are not sent to us or to an AI provider.</li>
+    <li><b>Voice:</b> speech is transcribed on your device by Apple's speech recognition.</li>
+    <li><b>Understanding and answers:</b> sorting memories and answering your questions use Apple's on-device Foundation Models. Your memories are not sent to us or to any AI provider.</li>
     <li><b>Photos:</b> text in photos is read on your device.</li>
-    <li><b>Links:</b> when you save a link, the app fetches that page's title and preview image directly from the website, the same way a browser would.</li>
+    <li><b>Links:</b> when you save a link, the app fetches that page's title and preview image directly from the website, the way a browser would.</li>
+    <li><b>Search:</b> memories are added to your iPhone's on-device Spotlight index so you can find them from Search. Locked memories are left out.</li>
   </ul>
 
-  <h2>Permissions</h2>
-  <p>Stratus asks for access only when you use a feature that needs it, and you can change any of these in iOS Settings at any time.</p>
+  <h2>Permissions Stratus asks for</h2>
+  <p>Stratus asks for each permission only when you first use the feature that needs it. You can turn any of them off in the Settings app.</p>
   <ul>
     <li><b>Microphone and speech recognition:</b> to save memories by voice.</li>
-    <li><b>Camera and photos:</b> to save photos you take or choose.</li>
-    <li><b>Contacts:</b> to match people you mention with the right contact and spelling. Contacts are read on your device and are not uploaded.</li>
-    <li><b>Calendar and Reminders:</b> to add the events and reminders you ask for, and to check that they still exist.</li>
+    <li><b>Camera and photos:</b> to save a photo you take or choose.</li>
+    <li><b>Contacts:</b> to match the people you mention with the right contact and spelling, and, when you tell Stratus someone's birthday and their contact has none, to add it to that contact. Stratus never changes a birthday that is already there. Contacts are read on your device and never uploaded.</li>
+    <li><b>Calendars and Reminders:</b> to add the events and reminders you ask for, keep them up to date when you edit the memory, and check that they still exist.</li>
+    <li><b>Notifications:</b> for reminders you ask for. These are scheduled on your device.</li>
+    <li><b>Face ID:</b> to open memories you have locked. Apple handles Face ID; we never see it.</li>
   </ul>
 
-  <h2>Services you connect</h2>
-  <p>If you connect Todoist or Google Calendar, Stratus sends those services only the tasks or events you ask it to create, directly from your device. Sign-in tokens are stored in your device's Keychain. Your use of those services is covered by their own privacy policies. You can disconnect them in Settings at any time.</p>
+  <h2>Todoist (optional)</h2>
+  <p>If you connect Todoist, Stratus sends Todoist only the tasks you choose to send: the task title, its notes (including the words you said), the due date, and the project. Your device talks to Todoist directly, and the sign-in token is kept in your device's Keychain. Disconnecting in Stratus Settings revokes the token and deletes it from your device. Todoist handles the tasks it receives under its own privacy policy.</p>
 
-  <h2>Google user data</h2>
-  <p>This section explains how Stratus accesses, uses, stores, shares, retains and deletes Google user data when you choose to connect Google Calendar. Connecting Google Calendar is optional.</p>
+  <h2>Google Calendar (optional)</h2>
+  <p>Stratus can connect to your Google Account so events you tell Stratus about go into your Google Calendar. This is optional, off until you turn it on in Settings, and you can disconnect at any time. This section explains exactly what Stratus accesses from Google, what it does with it, and where it goes.</p>
 
-  <h3>Data Stratus accesses</h3>
-  <p>Stratus requests one Google permission, the <code>https://www.googleapis.com/auth/calendar.events</code> scope ("View and edit events on all your calendars"). With it, Stratus accesses only:</p>
+  <h3>What Stratus accesses</h3>
+  <p>When you connect, Google asks you to allow one permission, <code>https://www.googleapis.com/auth/calendar.events</code> ("View and edit events on all your calendars"). Stratus uses it only for:</p>
   <ul>
-    <li>The events Stratus creates for you: their title, notes, date and time, and Google's event identifier.</li>
-    <li>Your primary calendar's time zone, so event times are correct.</li>
+    <li><b>Events Stratus creates:</b> the title, description (the words you said), start and end date or time, time zone, repeat rule and pop-up reminder of each event Stratus adds for you, plus Google's identifier for that event.</li>
+    <li><b>Your primary calendar's time zone:</b> so event times are correct.</li>
   </ul>
-  <p>Stratus does not read, list or search your other calendar events, and it does not access your Google profile, email, contacts or any other Google data.</p>
+  <p>Stratus does not read, list or search your other events, and does not access guest lists, attachments, your Google profile, contacts, Gmail or any other Google data.</p>
 
   <h3>How Stratus uses it</h3>
   <ul>
-    <li>To create a calendar event when you say or type an event into Stratus and choose to send it to Google Calendar.</li>
-    <li>To update or delete that same event when you edit or delete it in Stratus.</li>
-    <li>To read back that same event, for example to check that it still exists.</li>
+    <li>To create an event when you say or type one into Stratus.</li>
+    <li>To update or delete that same event when you edit or delete its memory in Stratus.</li>
+    <li>To read that same event back, for example to check that it still exists.</li>
   </ul>
-  <p>Google user data is used only to provide these user-facing calendar features. It is not used for advertising, not sold, not used to build user profiles, and not used to develop, improve or train artificial intelligence or machine learning models.</p>
+  <p>Stratus uses Google data only to provide these features you see in the app. It is not used for advertising, sold, used to build profiles, or used to develop, improve or train AI or machine learning models. No person reads it.</p>
 
-  <h3>How it is stored and protected</h3>
-  <p>Requests go directly from your iPhone to Google over encrypted HTTPS. Stratus has no servers, so Google user data never reaches us. The Google sign-in token is stored in your device's Keychain. The identifiers and details of events Stratus created are stored on your device with the memory they came from, and in your private iCloud account if you turn on iCloud sync, where Apple encrypts it and we cannot access it.</p>
+  <h3>Where it is stored and who it is shared with</h3>
+  <ul>
+    <li>Your device talks to Google directly over encrypted HTTPS. Google data never passes through or is stored on our servers (we have none), and we cannot see it.</li>
+    <li>The sign-in token Google issues is kept in your device's Keychain, only on that device.</li>
+    <li>Google's identifier and the details of each event Stratus created are stored with the memory it came from, on your device and in your private iCloud if iCloud sync is on.</li>
+    <li>We don't transfer Google data to anyone else, except as needed to provide these features (Apple's iCloud, for syncing your own memories), to comply with the law, or as part of a merger or sale with your consent where required.</li>
+  </ul>
 
-  <h3>Sharing</h3>
-  <p>Stratus does not share, transfer or disclose Google user data to anyone. No person at Stratus can read it.</p>
-
-  <h3>Retention and deletion</h3>
-  <p>Event details are kept on your device only as long as the memory they belong to. Deleting the memory in Stratus deletes the event from Google Calendar and removes its details from your device after Recently Deleted is emptied (at most 30 days). Disconnecting Google Calendar in Stratus Settings deletes the sign-in token from your device. You can also revoke Stratus's access at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. Deleting the app removes all of its data from your device. To ask a question about your data, email hello@getstratusapp.com.</p>
+  <h3>Keeping and deleting it</h3>
+  <ul>
+    <li>Event details are kept only as long as the memory they belong to. Deleting the memory deletes its event from Google Calendar, and its details are removed from Stratus when Recently Deleted is emptied (at most 30 days).</li>
+    <li>Disconnect any time in Stratus under Settings, Google Calendar. Stratus revokes its access with Google and deletes the token from your Keychain. Disconnecting doesn't delete events already in your Google Calendar.</li>
+    <li>You can also remove Stratus's access at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+  </ul>
 
   <h3>Limited Use</h3>
-  <p>Stratus's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+  <p>Stratus's use and transfer of information received from Google APIs to any other app will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
 
   <h2>Purchases</h2>
-  <p>Stratus is a one-time purchase through the App Store. Payment is handled by Apple, and we never see your payment details.</p>
-
-  <h2>What we do not do</h2>
-  <ul>
-    <li>We do not sell or share your personal information.</li>
-    <li>We do not use your memories for advertising or to train AI models.</li>
-    <li>We do not include analytics or advertising trackers in the app, and we do not track you across other apps or websites.</li>
-  </ul>
+  <p>Stratus is a one-time purchase through the App Store. Apple processes the payment, and we never see your payment details. There are no subscriptions or in-app purchases.</p>
 
   <h2>Diagnostics</h2>
-  <p>If you have opted in to share analytics with app developers in iOS Settings, Apple may share anonymous crash reports and usage statistics with us. These do not include your memories.</p>
+  <p>Stratus contains no analytics or crash-reporting code. If you have chosen in iOS Settings to share analytics with app developers, Apple may share anonymous crash reports and usage statistics with us. These never include your memories.</p>
 
-  <h2>Deleting your information</h2>
-  <p>Deleted memories go to Recently Deleted and are permanently removed after 30 days, or sooner if you empty it. Deleting the app removes its data from your device. To remove synced data, delete it from iCloud in iOS Settings. You can export everything first from Settings in the app.</p>
+  <h2>Our website and emails</h2>
+  <p>getstratusapp.com has no accounts, cookies, analytics or ads. It is hosted on GitHub Pages, which records standard server logs, such as IP address, browser type and the page requested, to run and protect the site. Pages load fonts from Google Fonts, so Google receives your IP address when you visit.</p>
+  <p>If you email hello@getstratusapp.com, we receive your email address and whatever you write, and use them only to answer you. We delete support emails within 2 years of the conversation ending, or sooner if you ask.</p>
+
+  <h2>Security</h2>
+  <p>Your memories are protected by your device's encryption and by Apple's iCloud security: Apple encrypts iCloud data in transit and in storage, and turning on Advanced Data Protection adds end-to-end encryption. Sign-in tokens for Google and Todoist are kept in your device's Keychain. Everything Stratus sends over the internet uses HTTPS. You can lock individual memories behind Face ID. No system is perfectly secure, so if we learn of a breach that affects you, we'll tell you as the law requires.</p>
+
+  <h2>What we don't do</h2>
+  <p>We don't sell or rent personal information, use advertising or analytics SDKs, build profiles of you, train AI on your memories, or track you across other companies' apps and websites. We don't "sell" or "share" personal information as the California Consumer Privacy Act defines those words, and we don't use it for targeted advertising.</p>
+
+  <h2>Keeping or deleting your data</h2>
+  <p>You control your data in Stratus. You can edit or delete any memory, and export everything from Settings. Deleted memories go to Recently Deleted and are permanently removed after 30 days, or sooner if you empty it. Deleting the app removes the copy on your device; data in iCloud can be removed from iCloud settings on your device. Because we don't hold your memories, we can't recover them for you.</p>
 
   <h2>Children</h2>
-  <p>Stratus is not directed at children under 13, and we do not knowingly collect information from them.</p>
+  <p>Stratus isn't directed at children under 13, and we don't knowingly collect personal information from them.</p>
+
+  <h2>Your rights</h2>
+  <p>Depending on where you live (for example under the GDPR or the CCPA), you may have the right to access, correct, delete or export your personal information. Most of this you can do in the app, since your data is on your device. For anything else, write to hello@getstratusapp.com and we'll reply within 30 days. We won't treat you differently for using these rights. If you're unhappy with our answer, you can complain to your local data protection authority.</p>
+  <p>Europe and the UK: we handle the little personal information we receive because you chose to send it (consent, which you can withdraw at any time) or to answer you and keep Stratus working (our legitimate interests). We're based in the United States, so information you send us, such as a support email, is handled there.</p>
 
   <h2>Changes</h2>
-  <p>If we change this policy, we will update the date above and, for significant changes, tell you in the app.</p>
+  <p>If we change this policy, we'll update the date at the top and tell you in the app for important changes.</p>
 </main>
 <footer>
   <div class="wrap">
-    <span>© 2026 Stratus</span>
+    <span>© 2026 Damien Kan</span>
     <nav aria-label="Legal">
       <a href="privacy.html">Privacy Policy</a>
       <a href="terms.html">Terms of Service</a>
